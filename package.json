@@ -1,0 +1,23 @@
+{
+  "name": "env-cmd",
+  "version": "1.0.0",
+  "description": "env cmd example",
+  "main": "index.js",
+  "scripts": {
+    "test": "env cmd",
+    "dev": "env-cmd node log.js",
+    "set_env": "NODE_ENV=development npx env-cmd node log.js",
+    "json_file": "NODE_ENV=development npx env-cmd --file .env.json node log.js",
+    "prod": "npx env-cmd --environments production node log.js",
+    "all_builds": "npx env-cmd --environments development,staging,production node log.js"
+  },
+  "keywords": [
+    "env",
+    "cmd"
+  ],
+  "author": "abhishek sinha",
+  "license": "MIT",
+  "dependencies": {
+    "env-cmd": "^10.0.1"
+  }
+}
